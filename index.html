@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Happy Birthday Faisu 🎂</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;600&display=swap" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+
+<style>
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:'Inter', sans-serif;
+}
+
+body{
+  background:#0f0f0f;
+  color:white;
+  height:100vh;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  text-align:center;
+  padding:20px;
+}
+
+.card{
+  max-width:500px;
+  background:#181818;
+  padding:35px;
+  border-radius:20px;
+  box-shadow:0 10px 40px rgba(0,0,0,0.6);
+  display:none;
+  animation:fadeIn 1.5s ease-in-out forwards;
+}
+
+h1{
+  font-size:26px;
+  margin-bottom:15px;
+}
+
+p{
+  font-size:15px;
+  opacity:0.85;
+  margin-bottom:18px;
+  line-height:1.6;
+}
+
+button{
+  padding:14px 28px;
+  border:none;
+  border-radius:30px;
+  background:white;
+  color:black;
+  font-weight:600;
+  cursor:pointer;
+  transition:0.3s;
+}
+
+button:hover{
+  background:#d4d4d4;
+}
+
+#revealBtn{
+  background:transparent;
+  border:1px solid white;
+  color:white;
+}
+
+.slider{
+  margin-top:20px;
+  overflow:hidden;
+  border-radius:15px;
+}
+
+.slides{
+  display:flex;
+  width:300%;
+  animation:slide 12s infinite;
+}
+
+.slides img{
+  width:100%;
+  height:220px;
+  object-fit:cover;
+}
+
+@keyframes slide{
+  0%{transform:translateX(0%);}
+  33%{transform:translateX(-100%);}
+  66%{transform:translateX(-200%);}
+  100%{transform:translateX(0%);}
+}
+
+@keyframes fadeIn{
+  from{opacity:0; transform:translateY(20px);}
+  to{opacity:1; transform:translateY(0);}
+}
+</style>
+</head>
+
+<body>
+
+<button id="revealBtn" onclick="reveal()">Tap to Reveal 🎉</button>
+
+<div class="card" id="card">
+  <h1>Happy Birthday Faisu 🎂🔥</h1>
+
+  <p>
+  Since 2022… from random plans to unforgettable memories,
+  you’ve been more than just a friend — you’ve been my brother.
+  </p>
+
+  <p>
+  Roaming around Lal Chowk without any destination,
+  walking through the Tulip Garden, jumping over that wire wall,
+  discovering new restaurants,
+  and ordering dishes out of curiosity, looking at the price more than the dish, leaving out water 😭🔥
+  </p>
+
+  <p>
+  Those small moments turned into the best memories.
+  May this year bring you success, strength, peace,
+  and even crazier adventures together.
+  </p>
+
+  <p>
+  Stay legendary. Stay unstoppable. Always my brother.
+  </p>
+
+  <div class="slider">
+    <div class="slides">
+      <img src="your-photo-link.jpg">
+    </div>
+  </div>
+
+</div>
+
+<script>
+function reveal(){
+  document.getElementById("revealBtn").style.display="none";
+  document.getElementById("card").style.display="block";
+
+  confetti({
+    particleCount: 200,
+    spread: 90,
+    origin: { y: 0.6 }
+  });
+}
+</script>
+
+</body>
+</html>
